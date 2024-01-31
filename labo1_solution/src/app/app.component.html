@@ -1,0 +1,52 @@
+<div class="container">
+
+  <!-- Rangée 1 -->
+  <div class="row mt-2">
+    <div class="col-3 py-1">
+      {{myWisdom}}
+    </div>
+    <div class="col-9 py-1">
+      {{n}}
+    </div>
+  </div>
+
+  <!-- Rangée 2 -->
+  <div class="row mt-2">
+    <div class="col-3 py-1">
+      <p>{{dog.name}}</p>
+      <p>{{dog.dogInfo()}}</p>
+      <img class="img-fluid" src="{{dog.imgUrl}}" alt="Pitou">
+    </div>
+    <div class="col-9 py-1">
+      <ul>
+        <li *ngFor="let h of hateList">{{h}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rangée 3 -->
+  <div class="row mt-2">
+    <div class="col-3 py-1">
+      <p *ngFor="let f of friends">{{f.name}} - {{f.occupation}} <span *ngIf="f.occupation == 'artiste ASMR'">😳</span></p>
+    </div>
+    <div class="col-9 py-1">
+      <form>
+        <input type="text" name="name" [(ngModel)]="name">
+        <input type="text" name="occupation" [(ngModel)]="occupation">
+        <button (click)="addFriend()">Ajouter l'ami</button>
+      </form>
+      <button (click)="removeFriend()">Retirer le dernier ami</button>
+    </div>
+  </div>
+
+  <!-- Rangée 4 -->
+  <div class="row mt-2 {{darkMode ? ' dark' : ''}}">
+    <div class="col-3 py-1">
+     <button (click)="toggleMode()"><span *ngIf="darkMode">🌞</span><span *ngIf="!darkMode">🌙</span></button>
+    </div>
+    <div class="col-9 py-1">
+      <p *ngIf="!darkMode">Thème clair</p><p *ngIf="darkMode">Thème obscur</p>
+    </div>
+  </div>
+</div>
+
