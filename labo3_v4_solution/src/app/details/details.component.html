@@ -1,0 +1,12 @@
+<h3>Détails sur {{characterName}}</h3>
+<img src="/assets/img/{{characterName}}.png" alt="{{characterName}}">
+
+<div *ngIf="characterDetails != null">
+  <table>
+    <tr><td><b>Nom complet</b> : </td><td>{{characterDetails.name}}</td></tr>
+    <tr><td><b>Âge</b> : </td><td>{{characterDetails.age}}</td></tr>
+    <tr><td><b>Occupation</b> : </td><td>{{characterDetails.occupation}}</td></tr>
+    <tr><td><b>Grade</b> : </td><td>{{characterDetails.grade}}</td></tr>
+    <tr><td><b>Nombre d'épisodes</b> : </td><td>{{characterDetails.nbEpisodes}}</td></tr>
+  </table>
+</div>

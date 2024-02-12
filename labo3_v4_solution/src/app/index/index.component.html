@@ -1,0 +1,12 @@
+<h3>Accueil</h3>
+
+<h4>Option 1</h4>
+<p class="clic" [routerLink]="['/list']">Voir une liste de personnages
+  <img *ngFor="let c of data.characters" class="mini" src="/assets/img/{{c}}.png" alt="{{c}}">
+</p>
+
+<h4>Option 2</h4>
+<p>Chercher les détails d'un personnage</p>
+<form>
+  Nom : <input type="text" name="characterName" [(ngModel)]="characterName"><button class="clic" [routerLink]="['/details', characterName]">Chercher</button>
+</form>
