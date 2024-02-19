@@ -1,0 +1,10 @@
+{
+  "i18n":{
+    "argent":"Your money :",
+    "pari":"Bet $ 5 on a number",
+    "pariPair":"Bet $ 5 on reds",
+    "pariImpair":"Bet $ 5 on blacks",
+    "roulette":"Bilingual roulette",
+    "message":"What are you waiting for ?"
+  }
+}

@@ -1,0 +1,27 @@
+<main class="container fond">
+  <div class="row">
+    <div class="col-3">
+      <form (ngSubmit)="jouer(number!)">
+        <div class="money" translate>i18n.argent <span>{{money + " $"}}</span></div><br>
+        <div translate>i18n.pari</div>
+        <input type="number" name="number" [(ngModel)]="number" class="form-control" min="0" max="35" pattern="[0-9]+"><br>
+      </form>
+      <div class="form">
+        <button (click)="jouerCouleur('red')" class="btn btn-danger form-control" translate>i18n.pariPair</button><br><br>
+        <button (click)="jouerCouleur('black')" class="btn btn-dark form-control" translate>i18n.pariImpair</button><br>
+      </div>
+      <div class="form">
+        <button (click)="changeLanguage('fr')" class="btn btn-light form-control">Français</button><br><br>
+        <button (click)="changeLanguage('en')" class="btn btn-light form-control">English</button><br>
+      </div>
+    </div>
+    <div class="col text-center">
+      <h2 translate>i18n.roulette</h2>
+      <div class="roulette">
+        <img src="../../assets/images/ball.png" alt="Ball" id="ball" style="left:473px; top:197px;">
+        <img src="../../assets/images/roulette.png" alt="Roulette" class="slot">
+      </div>
+      <div id="messageRoulette" translate>i18n.message</div>
+    </div>
+  </div>
+</main>
