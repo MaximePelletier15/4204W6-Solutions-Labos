@@ -1,0 +1,53 @@
+
+header,main,footer, nav{
+    background-color:white;
+    border:lightgray solid 1px;
+    width:1000px;
+    margin:auto;
+    margin-bottom:5px;
+}
+
+footer div{
+    text-align:center;
+    padding:5px;
+    font-size:1em;
+    vertical-align: middle;
+}
+
+body{
+    background: linear-gradient(#ffe7ef,#ffe7ff, #eae7ff, #e7faff) fixed;
+    font-family:Verdana;
+    color:gray;
+}
+
+nav .row{
+    justify-content: space-around;
+}
+
+nav .row>div{
+    padding:5px 0px;
+    flex:1;
+    text-align:center;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+nav .row>div:hover{
+    background:linear-gradient(to right, #ffbfff, #bcf0ff) fixed;
+    color:white;
+}
+
+.row{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+header .row{
+    gap:10px;
+}
+
+header .row div{
+    padding:10px;
+    font-weight:bold;
+}
+

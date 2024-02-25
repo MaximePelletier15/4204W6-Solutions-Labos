@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="description">
+    <h3>Placer des ballons 🕵️‍♂️🎈</h3>
+    <p>
+      Mise en situation que personne n'a demandée : Vous réfléchissez aux endroits où vous aimeriez envoyer vos prochains
+      ballons espions « par erreur ». Vous pouvez utiliser cette carte pour placer des punaises où vous comptez envoyer
+      vos ballons.
+    </p>
+  </div>
+  <div class="description">
+    <h3>Ajouter un ballon</h3>
+    <form>
+      Latitude : <input type="number" name="lat" [(ngModel)]="inputLat" step="1">
+      Longitude : <input type="number" name="lng" [(ngModel)]="inputLng" step="1">
+      <button (click)="addBalloon()">Ajouter 🎈</button>
+      <button (click)="clearBalloons()">Retirer tout 📌</button>
+    </form>
+  </div>
+  <div class="map">
+    <google-map
+      [center]="center"
+      [zoom]="zoom"
+      width="700"
+      height="300">
+      <map-marker
+        *ngFor="let marker of markerPositions"
+        [position]="marker">
+      </map-marker>
+    </google-map>
+  </div>
+</div>

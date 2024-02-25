@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="search">
+    <h3>Chercher une vidéo 🎥</h3>
+
+    <!--
+      Avec ce formulaire, l'utilisateur lance une recherche. La première vidéo Youtube trouvée est
+      choisie et affichée plus bas dans le lecteur.
+    -->
+    <form (ngSubmit)="searchVideo()">
+      <input type="text" name="videoSearchText" placeholder="ASMR tongue sounds" [(ngModel)]="videoSearchText">
+      <button type="submit">Rechercher</button>
+    </form>
+
+  </div>
+  <div class="videoPlayer" *ngIf="videoUrl != undefined">
+
+    <!-- 
+      Lecteur Youtube 
+      L'attribut [src] sera rempli avec l'url de la vidéo trouvée suite à une requête à l'API Youtube Data.
+    -->
+    <iframe width="560" height="315" [src]="videoUrl" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+    web-share" allowfullscreen></iframe>
+
+  </div>
+</div>

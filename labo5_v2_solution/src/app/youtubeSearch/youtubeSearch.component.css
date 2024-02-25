@@ -1,0 +1,22 @@
+.search h3{
+    margin:0px;
+}
+
+.search{
+    padding:10px;
+    flex-basis:100%;
+}
+
+.search input{
+    width:300px;
+    margin:5px 5px 5px 0px;
+}
+
+.videoPlayer{
+    margin:0px 10px;
+}
+
+.videoPlayer iframe{
+   border:lightgray solid 1px;
+   padding:5px;
+}

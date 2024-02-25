@@ -1,0 +1,22 @@
+<header>
+   <div class="row">
+      <div>
+        Laboratoire 5
+      </div>
+   </div>
+</header>
+<nav>
+  <div class="row">
+    <div [routerLink]="['/youtube']">Youtube</div>
+    <div [routerLink]="['/balloonMap']">Google</div>
+    <div [routerLink]="['/plumbing']">Pipe</div>
+  </div>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <div>
+    &copy; Tous droits réservés à Google
+  </div>
+</footer>

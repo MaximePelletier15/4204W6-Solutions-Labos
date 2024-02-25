@@ -1,0 +1,21 @@
+.description h3, .description p{
+    margin:0px;
+}
+
+.description{
+    padding:10px;
+    flex-basis:100%;
+}
+
+.description button{
+    margin-left:5px;
+}
+
+.search input{
+    width:300px;
+    margin:5px 5px 5px 0px;
+}
+
+.map{
+    margin:0px 10px 10px 10px;
+}
